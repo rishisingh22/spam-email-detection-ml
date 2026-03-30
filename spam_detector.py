@@ -45,15 +45,15 @@ def predict_spam(text):
     result = model.predict(text_vec)
 
     if result[0] == 1:
-        return "Spam ❌"
+        return "Spam"
     else:
-        return "Not Spam ✅"
+        return "Not Spam"
 
 
 while True:
-    user_input = input("\nEnter message (or type 'exit'): ")
+    ui = input("\nEnter message (or type 'exit'): ")
 
     if user_input.lower() == 'exit':
         break
 
-    print("Prediction:", predict_spam(user_input))
+    print("Prediction:", predict_spam(ui))
